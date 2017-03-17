@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name" translatable="false">Stock Hawk</string>
+
+
+    <string name="error_no_network">No internet network found, please connect to wifi or data</string>
+    <string name="already_saved">Symbol already added by you</string>
+    <string name="none_selected">Press + button to add a stock</string>
+    <string name="network_toast">There is no internet connection</string>
+    <string name="app_offline">Internet offline, connect for stock updates</string>
+    <string name="error">Error</string>
+    <string name="symbol_search">Stock Symbol</string>
+    <string name="search_title">Enter the Stock symbol</string>
+    <string name="input_hint" translatable="false">GOOG</string>
+    <string name="string_tag" translatable="false">tag</string>
+    <string name="add_stock">Add a Stock</string>
+    <string name="desc_add">Add a Stock</string>
+    <string name="action_change_units">Change Unit</string>
+    <string name="stock_detail_title">Stock Detail</string>
+    <string name="invalid_stock">No stock match that symbol</string>
+    <string name="widget_title">Stock Hawk</string>
+
+    <string name="input_prefill"/>
+
+    <string name="stock_added">New Stock added</string>
+
+</resources>

@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'android-apt'
+
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+
+    defaultConfig {
+        applicationId "com.udacity.stockhawk"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFile "proguard-google-play-services.pro"
+            proguardFile "proguard-guava.pro"
+            proguardFile "proguard-square-okhttp3.pro"
+            proguardFile "proguard-square-okio.pro"
+            proguardFile "proguard-support-v7-appcompat.pro"
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    compile 'com.android.support:design:25.0.1'
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+    compile 'com.melnykov:floatingactionbutton:1.2.0'
+    compile 'com.lsjwzh:materialloadingprogressbar:0.5.6-RELEASE'
+    compile 'com.github.blackfizz:eazegraph:1.2.2@aar'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile('com.github.afollestad.material-dialogs:core:0.8.5.7@aar') {
+        transitive = true
+    }
+    apt 'net.simonvt.schematic:schematic-compiler:0.6.3'
+    compile 'net.simonvt.schematic:schematic:0.6.3'
+
+}
